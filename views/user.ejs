@@ -1,0 +1,38 @@
+<%- include('./header.ejs')%>
+<%- include('./nav-bar.ejs')%>
+
+    <div class="container">
+        <div class="container my-4">
+            <div class=" w-100 d-flex ">
+                <div class="row justify-content-center w-100 p-1">
+
+
+                  <% if( cards.length<1) {%>
+                   <div class="text-center"> 
+                    <h1 >
+                      no cards
+                    </h1>
+                  </div>
+                  <%}%> 
+
+
+
+                    <% for(let card of cards) {%> 
+                  
+                        <a href="/one-item/<%= card._id %>" class="card m-3" style="width: 18rem;">
+                          <img class="card-img-top" src="<%= card.url %>" alt="Card image cap">
+                          <div class="card-body m-auto">
+                            <h5 class="card-title text-center"><%= card.title %></h5>
+                          </div>
+                          <div class="card-footer text-muted text-center">
+                            <%= card.date.substring(0,24) %>
+                          </div>
+                        </a>
+                    <% } %> 
+                                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('./footer.ejs')%>

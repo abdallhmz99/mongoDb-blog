@@ -1,0 +1,31 @@
+<%- include('./header.ejs')%>
+<%- include('./nav-bar.ejs')%>
+
+    <div class="container">
+
+            <form action="/Add" method="POST" enctype="multipart/form-data">
+                <div class="row mt-5" >
+
+                <div class="col-md-6">
+                    <div class="form-group  ">
+                        <input name="title" type="text" class="form-control" placeholder=" title">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group  ">
+                        <input name="url" type="file" class="form-control" id="inputPassword" placeholder="url">
+
+                    </div>
+                </div>
+
+                <button class="btn btn-primary m-auto w-25" type="submit">add</button>    
+            </form>
+
+    </div>
+
+    <div >
+        <h4 <%if( comment){%>style="visibility: hidden;"<%}%> >file must be jpg or jpeg or png</h4>
+    </div>
+
+<%- include('./footer.ejs')%>
