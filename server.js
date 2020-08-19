@@ -41,7 +41,7 @@ var storage = multer.diskStorage({
 
 app.use(AppRoutes);
 
-mongoose.connect("mongodb://localhost:27017/blog",{useNewUrlParser:true,useUnifiedTopology:true});
+mongoose.connect("mongodb+srv://abdalla:abdalla@abdalla-mongodb.jme2d.mongodb.net/blog",{useNewUrlParser:true,useUnifiedTopology:true});
 
 app.listen( process.env.PORT || 3000 ) ;
 
